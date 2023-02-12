@@ -297,7 +297,7 @@ submitBtn.addEventListener("click", function() {
 
 document.getElementById("inst").addEventListener("input", function() {
 this.value = this.value.replace(/^@?/, "@");
-if (this.value.length > 1 && !/^@[a-zA-Z0-9_]+$/.test(this.value)) {
+if (this.value.length > 1 && !/^@[a-zA-Z0-9_.]+$/.test(this.value)) {
 alert("Nome de usuário do Instagram inválido. Por favor, insira um nome de usuário válido");
 this.value = this.value.slice(0, -1);
 }
