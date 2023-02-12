@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ficha de Cadastro</title>
+<style>
+body {
+  background-color: black;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: lightgray;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.input-label {
+  color: black;
+  font-size: 16px;
+  margin: 5px 0 1px;
+  text-align: left;
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="date"] {
+  padding: 10px;
+  margin: 10px;
+  width: calc(100% - 37px);
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+select {
+  padding: 10px;
+  margin: 10px;
+  width: calc(100% - 18px);
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+#age {
+  text-align: center;
+  margin: 10px;
+  color: gray;
+  font-size: 16px;
+}
+
+.btn {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+}
+
+.button-text {
+  color: gray;
+  font-size: 11px;
+  margin-top: 1px;
+  text-align: center;
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  .form-container {
+    padding: 10px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .btn {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .button-text {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .form-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .input-label {
+    font-size: 18px;
+  }
+
+  input[type="text"], input[type="date"] {
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  select {
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  #age {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+
+  .button-text {
+    font-size: 14px;
+  }
+}
+
+</style>
+
+  </head>
+  <body>
+    <h1>Ficha de Cadastro</h1>
+    <div class="form-container">
+      <div>
+        <div class="input-label">Nome Completo:</div>
+        <input type="text" placeholder="Insira seu nome completo" id="name">
+      </div>
+      <div>
+        <div class="input-label">Instagram:</div>
+        <input type="text" placeholder="Insira seu @" id="inst">
+      </div>
+<div>
+        <div class="input-label">Data de Nascimento:</div>
+      <input type="date" placeholder="Data de Nascimento" id="dob">
+</div>
+      <p id="age"></p>
+<div>
+        <div class="input-label">Altura:</div>
+        <input type="text" placeholder="Insira sua Altura" id="size">
+</div>
+      <div>
+        <div class="input-label">Insira seu Estado:</div>
+      <select id="state" title="Selecione o estado">
+        <option selected disabled>Escolha seu Estado</option>
+        <!-- Adicionar todos os estados do Brasil aqui -->
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+      </select>
+</div>
+<div>
+        <div class="input-label">Insira sua Cidade:</div>
+      <input type="text" placeholder="Cidade" id="city">
+</div>
+      <div>
+        <div class="input-label">Insira sua área de interesse:</div>
+      <select id="interest" title="Escolha uma Opção">
+        <option selected disabled>Escolha uma Opção</option>
+        <option value="Modelo">Modelo</option>
+        <option value="Miss">Miss</option>
+        <option value="Influencer">Influencer</option>
+        <option value="Contratar Serviços">Contratar Serviços</option>
+      </select>
+</div>
+      <button class="btn" id="submit">Enviar</button>
+<div>
+        <div class="button-text">Ao clicar em enviar, abrirá o Whatsapp com a mensagem pronta para ser enviada sem alterações.</div>
+ <div class="button-text">Seus dados não serão armazenados.</div>
+</div>
+    </div>
+
+<script>
+  const dobInput = document.getElementById("dob");
+  const ageDisplay = document.getElementById("age");
+  const submitBtn = document.getElementById("submit");
+  
+  dobInput.addEventListener("input", function() {
+    const dob = new Date(dobInput.value);
+    const today = new Date();
+    let age = today.getFullYear() - dob.getFullYear();
+    const monthDiff = today.getMonth() - dob.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+      age--;
+    }
+    ageDisplay.innerHTML = `Idade: ${age} anos`;
+  });
+
+  document.getElementById("inst").addEventListener("input", function() {
+    this.value = this.value.replace(/^@?/, "@");
+  });
+
+  document.getElementById("size").addEventListener("input", function() {
+    this.value = this.value.replace(/[^\d.,]+/g, "");
+    this.value += " metros";
+  });
+
+submitBtn.addEventListener("click", function() {
+  const name = document.getElementById("name").value;
+  const inst = document.getElementById("inst").value.substr(1);
+  const dob = document.getElementById("dob").value;
+  let age = "";
+  const size = document.getElementById("size").value;
+  const state = document.getElementById("state").value;
+  const city = document.getElementById("city").value;
+  const interest = document.getElementById("interest").value;
+
+  if (!dob) {
+    alert("Por favor, preencha todos os campos.");
+    return;
+  }
+
+  const today = new Date();
+  const birthDate = new Date(dob);
+  age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+  if (!name || !inst || !size || !state || !city || !interest) {
+    alert("Por favor, preencha todos os campos.");
+    return;
+  }
+
+  if (state === "Escolha seu Estado") {
+    alert("Selecione um estado válido");
+    return;
+  }
+
+  if (interest === "Escolha uma Opção") {
+    alert("Selecione um interesse");
+    return;
+  }
+
+  const message = `Nome: ${name}\nInstagram: https://www.instagram.com/${inst}\nData de Nascimento: ${dob}\nIdade: ${age}\nAltura: ${size}\nEstado: ${state}\nCidade: ${city}\nInteresse: ${interest}`;
+  window.open(`https://api.whatsapp.com/send?phone=5527997655289&text=Olá, preenchi a ficha de cadastro, segue os dados:%0A${encodeURIComponent(message)}`);
+});
+
+  const inputs = document.querySelectorAll("input");
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+          inputs[i + 1].focus();
+        }
+      });
+    }
+
+document.getElementById("inst").addEventListener("input", function() {
+this.value = this.value.replace(/^@?/, "@");
+if (this.value.length > 1 && !/^@[a-zA-Z0-9_]+$/.test(this.value)) {
+alert("Nome de usuário do Instagram inválido. Por favor, insira um nome de usuário válido");
+this.value = this.value.slice(0, -1);
+}
+});
+
+</script>
+  </body>
+</html>
